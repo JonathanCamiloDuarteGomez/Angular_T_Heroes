@@ -1,0 +1,13 @@
+.d-item{
+  height: 500px;
+}
+.d-img {
+  height: 400px; /* Ajustar la altura a un valor fijo */
+  filter: brightness(0.8) contrast(1.2) saturate(1.2); /* Jugar con los filtros */
+  display: block; /* Asegurarse de que la imagen se comporte como un bloque */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+
+}

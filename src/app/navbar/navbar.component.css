@@ -1,0 +1,18 @@
+.star-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #9A8A8A; /* Color de fondo del botón */
+  color: #fff; /* Color del texto en el botón */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  clip-path: polygon(50% 0%, 61.8% 38.2%, 100% 35.4%, 68.2% 61.8%, 79.1% 100%, 50% 76.4%, 20.9% 100%, 31.8% 61.8%, 0% 35.4%, 38.2% 38.2%);
+}
+.reflected-image {
+  transform: scaleY(-1); /* Reflejar en el eje Y */
+}
+a{
+  font-family: 'Courier New', Courier, monospace;
+}
