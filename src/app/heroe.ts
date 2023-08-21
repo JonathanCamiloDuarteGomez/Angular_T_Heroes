@@ -5,3 +5,6 @@ export interface Hero{
   porcent_hab3: number,
   image: string
 }
+/*Actualice el estilo de la lista de viñetas.
+La lista incluye botones a los cuales se les puede modificar los bordes,
+ los colores y la tipografía. Modifique al menos dos propiedades del estilo de la lista*/

@@ -21,6 +21,7 @@ export class CardComponent implements OnInit {
   loadHeroes() {
     // Utiliza el servicio para cargar la lista de héroes
     this.heroes = this.listHeroes.getDataList();
+
   }
 }
 

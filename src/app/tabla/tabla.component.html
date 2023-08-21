@@ -1,0 +1,55 @@
+
+<table class="table table-striped container ">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">ESTRATEGIA</th>
+      <th scope="col">FUERZA</th>
+      <th scope="col">COMUNICACIÓN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heroes">
+      <td>{{ hero.name }}</td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="progress flex-grow-1">
+            <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="hero.porcent_hab1" [attr.aria-valuenow]="hero.porcent_hab1" aria-valuemin="0" aria-valuemax="100">
+              {{ hero.porcent_hab1 }}%
+            </div>
+          </div>
+          <div class="btn-group ml-2">
+            <button type="button" class="btn btn-light" (click)="cambiarClicked(0, 'plus', true,hero.name)">+</button>
+            <button type="button" class="btn btn-light" (click)="cambiarClicked(0, 'subtraction', true,hero.name)">-</button>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="progress flex-grow-1">
+            <div class="progress-bar bg-success text-dark" role="progressbar" [style.width.%]="hero.porcent_hab2" [attr.aria-valuenow]="hero.porcent_hab2" aria-valuemin="0" aria-valuemax="100">
+              {{ hero.porcent_hab2 }}%
+            </div>
+          </div>
+          <div class="btn-group ml-2">
+            <button type="button" class="btn btn-light" (click)="cambiarClicked(1, 'plus', true,hero.name)">+</button>
+            <button type="button" class="btn btn-light" (click)="cambiarClicked(1, 'subtraction', true,hero.name)">-</button>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="progress flex-grow-1">
+            <div class="progress-bar bg-warning text-dark" role="progressbar" [style.width.%]="hero.porcent_hab3" [attr.aria-valuenow]="hero.porcent_hab3" aria-valuemin="0" aria-valuemax="100">
+              {{ hero.porcent_hab3 }}%
+            </div>
+          </div>
+          <div class="btn-group ml-2">
+            <button type="button" class="btn btn-light" (click)="cambiarClicked(2, 'plus', true,hero.name)">+</button>
+            <button type="button" class="btn btn-light"  (click)="cambiarClicked(2, 'subtraction', true,hero.name)">-</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
