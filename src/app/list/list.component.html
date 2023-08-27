@@ -1,0 +1,75 @@
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: gray;">
+  <div class="modal-dialog" style="background-color: darkblue ;">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: darkblue ;" >
+        <div *ngFor="let name of list; index as i">
+          <div *ngIf="getIndex()===i" class="row">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ name.name }}</h1>
+          </div>
+        </div>
+
+        <button type="button"(click)="closeModel()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body card ">
+        <div *ngFor="let name of list; index as i">
+          <div *ngIf="getIndex()===i" class="row" [style.background-image]="'url(' + name.imagen_fondo + ')'">
+           <p>{{name.descripcion}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="background-color:darkblue ;">
+        <button type="button" class="btn btn-warning"data-bs-dismiss="modal" (click)="closeModel()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="list-group" >
+  <div class="container">
+    <div class="row">
+      <div class="col-6 list-group list-group-horizontal" >
+
+        <button type="button"  class="list-group-item list-group-item-action list-group-item-primary"
+         (click)="openModel();postIndex(i)"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+         aria-current="true" *ngFor=" let lis of list;index as i"  >
+
+          {{ lis.name }}
+
+
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center" style="background-color: black; margin: 10px;">
+  <div class="row row-cols-1 row-cols-md-3 g-4 content-container"(scroll)="onScroll($event)">
+    <ng-container *ngFor="let lis of list; let i = index">
+      <div class="col">
+        <input class="list-group-item-check pe-none visually-hidden" type="radio" name="listGroupCheckableRadios" [attr.id]="'listGroupCheckableRadios' + i" value="">
+        <button type="button" class="list-group-item list-group-item-action list-group-item-primary red-border-button superhero-button"
+                (click)="openModel(); postIndex(i)" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-current="true">
+          {{ lis.name }}
+          <label class="list-group-item rounded-3 py-3 visually-hidden" [attr.for]="'listGroupCheckableRadios' + i">
+            {{ lis.name }}
+          </label>
+        </button>
+        <div class="content">
+          <!-- Contenido ajustable dentro de la columna -->
+          <img [src]="lis.image" alt="{{ lis.name }}" class="img-fluid fixed-size-image">
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+
+
+
+

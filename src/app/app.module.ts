@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CardComponent } from './card/card.component';
 import {tablaComponent } from './tabla/tabla.component';
+import { ListComponent } from './list/list.component';
+
 
 
 
@@ -17,7 +19,8 @@ import {tablaComponent } from './tabla/tabla.component';
     NavbarComponent,
     CarouselComponent,
     CardComponent,
-    tablaComponent
+    tablaComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

@@ -11,3 +11,11 @@
   margin-right: auto; /* Centrar horizontalmente */
 
 }
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .active.carousel-item {
+  opacity: 1;
+}

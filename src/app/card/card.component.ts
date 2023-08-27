@@ -23,5 +23,12 @@ export class CardComponent implements OnInit {
     this.heroes = this.listHeroes.getDataList();
 
   }
+  isScrolled = false;
+  onScroll(event: Event) {
+    const target = event.target as HTMLElement;
+    const scrollPosition = target.scrollTop;
+
+    this.isScrolled = scrollPosition > 100;
+  }
 }
 

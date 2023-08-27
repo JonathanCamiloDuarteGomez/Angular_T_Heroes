@@ -31,3 +31,13 @@
   text-align: center;
   font-weight: bold;
 }
+.scrollable {
+  overflow-y: scroll;
+}
+.content-container {
+  max-height: 400px; /* Establece una altura máxima */
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical si el contenido excede la altura máxima */
+}
+.scroll-box.scrolled {
+  background-color: lightgray;
+}

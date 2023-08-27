@@ -1,15 +1,16 @@
-<div id="carouselExampleFade" class="carousel slide carousel-fade">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
   <div class="carousel-inner">
     <div class="carousel-item d-item" *ngFor="let heroe of heroes; let i = index" [class.active]="i === 0">
-      <div class="container-fluid">
-        <img [src]="heroe.image" class="d-block w-100 d-img" alt="uno">
-      <div class="carousel-caption top mt-4">
-        <p class="mt-5 fs-3 text-uppercase">{{ heroe.name }}</p>
-      </div>
-      </div>
+      <div class="container ">
+        <img [src]="heroe.image" class="d-block w-100 d-img img-fluit" alt="uno">
+        <div class="carousel-caption  mt-4">
 
+          <h2 class="mt-5 fw-bolder text-capitalize px-4 py-2 fs-5 mt-5 ">{{ heroe.name }}</h2>
+        </div>
+      </div>
     </div>
   </div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -19,3 +20,6 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
+
